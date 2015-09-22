@@ -32,11 +32,20 @@ sudo chmod +x /usr/bin/docker-compose
 ```bash
 vi /etc/default/docker and Add DOCKER_OPTS with the details specific to your private docker registry
 
-DOCKER_OPTS="$DOCKER_OPTS --dns 8.8.8.8  --dns 8.8.4.4 --insecure-registry 10.145.10.169:5000 --insecure-registry ctocacheserver.wipro.com:8000"
+DOCKER_OPTS="$DOCKER_OPTS --dns 8.8.8.8  --dns 8.8.4.4 --insecure-registry 10.145.10.169:5000 "
 
 once you have updated the above file restart docker service
 
 sudo service docker restart
 ```
 
+## vi commands
 
+```bash
+replace tabs with spaces
+1,$s/\t/  /g
+
+remove spaces end of line
+:%s/\s\+$//
+
+```
